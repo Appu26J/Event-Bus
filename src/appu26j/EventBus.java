@@ -22,7 +22,7 @@ public class EventBus
         for (int i = 0; i < this.registeredObjects.size(); i++)
         {
             Object clazz = this.registeredObjects.get(i);
-            Class originalClazz = clazz.getClass();
+            Class<?> originalClazz = clazz.getClass();
 
             for (Method method : originalClazz.getMethods())
             {
